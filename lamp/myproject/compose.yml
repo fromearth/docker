@@ -1,0 +1,37 @@
+services:
+  phpapache:
+    container_name: run-phpapache
+    build: ./phpapache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./phpapache/php.ini:/usr/local/etc/php/php.ini
+    environment:
+      - TZ=Asia/Tokyo
+    networks:
+      - phpapache-mysql-networks
+    depends_on:
+      - mysql
+  mysql:
+    build: ./mysql
+    container_name: run-mysql
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=test
+      - MYSQL_PASSWORD=test
+      - MYSQL_DATABASE=test_db
+      - TZ=Asia/Tokyo
+    volumes:
+      - ./mysql/initdb.d:/docker-entrypoint-initdb.d
+      - mysql-data:/var/lib/mysql
+    networks:
+      - phpapache-mysql-networks
+
+volumes:
+  mysql-data:
+
+networks:
+  phpapache-mysql-networks:
