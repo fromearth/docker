@@ -14,7 +14,7 @@ myproject/
       |     +- Dockerfile
       |     +- php.ini
       |
-      +- src/           {Webアプリケーション}
+      +- src/           {Webアプリケーション(ドキュメントルート)}
       |     +- index.php
       |
       +- compose.yml
@@ -60,7 +60,7 @@ Apache+PHPコンテナにターミナル接続するには
 ```sh
 docker compose exec phpapache bash
 ```
-ターミナル接続したらLinux（debian）の操作が自由にできます。  
+ターミナル接続した地点がドキュメントルートで、Linux（debian）の操作が自由にできます。  
 viエディタを使って開発することができます。
 
 MySQLコンテナにターミナル接続するには（ターミナルのタブを右クリックして「タブを複製する」から増やせます）
