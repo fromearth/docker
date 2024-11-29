@@ -69,7 +69,7 @@ docker compose exec mysql bash
 ```
 ターミナル接続したらLinux（debian）の操作が自由にできます。  
 mysqlクライアントを使ってサーバに接続することができます。
-```markdown
+```sql
 # mysql -u test -ptest test_db
 mysql> select * from item;
 +----+-----------+
