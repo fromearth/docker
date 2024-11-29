@@ -13,6 +13,7 @@ myproject/
       |
       +- compose.yml
 ```
+Laravelインストールにより「myproject」直下に「laravel」ディレクトリが作られ、その中の「public」ディレクトリをドキュメントルート設定にしています。
 
 ## Laravel環境の構築手順
 1. Docker Desktopを起動します。  
@@ -115,7 +116,7 @@ Apache+PHPコンテナにターミナル接続するには
 ```sh
 docker compose exec phpapache bash
 ```
-ターミナル接続したらLinux（debian）の操作が自由にできます。  
+ターミナル接続した地点（/var/www/html）がLaravelルートで、その中の「public」ディレクトリをドキュメントルート設定にしています。ここではLinux（debian）の操作が自由にできます。  
 viエディタを使って開発することができます。
 
 MySQLコンテナにターミナル接続するには（ターミナルのタブを右クリックして「タブを複製する」から増やせます）
