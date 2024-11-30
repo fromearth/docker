@@ -13,7 +13,7 @@ myproject/
       |
       +- compose.yml
 ```
-Laravelインストールにより「myproject」直下に「laravel」ディレクトリが作られ、その中の「public」ディレクトリをドキュメントルート設定にしています。
+Laravelインストールにより「myproject」直下に「laravel」ディレクトリが作られ、その中の「public」ディレクトリがドキュメントルートになる設定にしています。
 
 ## Laravel環境の構築手順
 1. Docker Desktopを起動します。  
