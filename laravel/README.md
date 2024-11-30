@@ -128,6 +128,7 @@ mysqlクライアントを使ってサーバに接続することができます
 ```sql
 # mysql -u test -ptest test_db
 mysql> select now();
+mysql> show tables;
 mysql> show variables like 'char%';
 mysql> \q
 ```
